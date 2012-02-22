@@ -1,0 +1,4 @@
+* source code の行数を求める command を作る
+	- コメント、空行は数えない
+	- module 行や export list も数えない
+	- import をたどってそれぞれの行数を表示、かつ全体の行数を表示する
