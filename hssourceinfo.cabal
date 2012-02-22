@@ -31,4 +31,11 @@ executable		hsmodtree
   Main-Is:		hsmodtree.hs
   Build-Depends:	base, containers, directory, regexpr
   Ghc-Options:		-Wall
-  Other-Modules:	
+  Other-Modules:	HsModTree
+
+executable		hscodelines
+  Hs-Source-Dirs:	src
+  Main-Is:		hscodelines.hs
+  Build-Depends:	base, containers, directory, regexpr, filepath
+  Ghc-Options:		-Wall
+  Other-Modules:	HsModTree
