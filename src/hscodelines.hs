@@ -21,7 +21,7 @@ main = do
 printModTreeLines :: FilePath -> [String] -> IO ()
 printModTreeLines dir mns = do
 	s <- fmap sum $ mapM (printModLines dir) mns
-	putStrLn $ "total" ++ replicate 27 ' ' ++ show s
+	putStrLn $ "total" ++ replicate 35 ' ' ++ show s
 	putStrLn ""
 
 printModLines :: FilePath -> String -> IO Int
@@ -32,7 +32,7 @@ printModLines dir mn = do
 	return lns
 
 showModLines :: FilePath -> Int -> String
-showModLines fp lns = fp ++ replicate (32 - length fp) ' ' ++ show lns
+showModLines fp lns = fp ++ replicate (40 - length fp) ' ' ++ show lns
 
 fileLines :: FilePath -> FilePath -> IO Int
 fileLines dir = fmap codeLines . readFile . (dir </>)
